@@ -1,43 +1,89 @@
 <!DOCTYPE html>
+<!-- このHTML文書がHTML5で書かれていることを宣言する -->
+
 <html lang="ja">
+<!-- HTMLのルート要素。lang="ja"は日本語の文書であることを示す -->
+
 <head>
     <meta charset="UTF-8">
+    <!-- 文字コードをUTF-8に設定。日本語など多言語対応 -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- モバイル対応。画面幅に合わせて表示を調整 -->
+
     <title>電卓アプリ</title>
+    <!-- ブラウザのタブに表示されるタイトル -->
+
     <link rel="stylesheet" href="style.css">
+    <!-- 外部スタイルシート（CSS）を読み込む -->
 </head>
+
 <body>
+    <!-- ページの本文 -->
+
     <div class="calculator">
+        <!-- 電卓全体のコンテナ -->
+
         <div class="display">
+            <!-- 表示部分（入力中や直前の計算式） -->
+
             <div class="previous-operand" id="previous-operand"></div>
+            <!-- 前回の計算内容を表示する部分（例: "3 + "） -->
+
             <div class="current-operand" id="current-operand">0</div>
+            <!-- 現在入力中の数値や計算結果を表示する部分 -->
         </div>
+
         <div class="buttons">
+            <!-- ボタン全体を囲むコンテナ -->
+
+            <!-- 機能ボタン -->
             <button class="btn clear" data-action="clear">AC</button>
+            <!-- AC（オールクリア）ボタン。全リセット -->
+
             <button class="btn operator" data-action="delete">DEL</button>
+            <!-- DEL（1文字削除）ボタン -->
+
             <button class="btn operator" data-action="percent">%</button>
+            <!-- パーセント計算ボタン -->
+
             <button class="btn operator" data-action="divide">÷</button>
-            
+            <!-- 割り算ボタン -->
+
+            <!-- 数字ボタン（7～9） -->
             <button class="btn number" data-number="7">7</button>
             <button class="btn number" data-number="8">8</button>
             <button class="btn number" data-number="9">9</button>
+
             <button class="btn operator" data-action="multiply">×</button>
-            
+            <!-- 掛け算ボタン -->
+
+            <!-- 数字ボタン（4～6） -->
             <button class="btn number" data-number="4">4</button>
             <button class="btn number" data-number="5">5</button>
             <button class="btn number" data-number="6">6</button>
+
             <button class="btn operator" data-action="subtract">−</button>
-            
+            <!-- 引き算ボタン -->
+
+            <!-- 数字ボタン（1～3） -->
             <button class="btn number" data-number="1">1</button>
             <button class="btn number" data-number="2">2</button>
             <button class="btn number" data-number="3">3</button>
+
             <button class="btn operator" data-action="add">+</button>
-            
+            <!-- 足し算ボタン -->
+
+            <!-- 0と小数点 -->
             <button class="btn number" data-number="0">0</button>
             <button class="btn number" data-number=".">.</button>
+
             <button class="btn equals" data-action="equals">=</button>
+            <!-- イコールボタン。計算結果を出す -->
         </div>
     </div>
+
     <script src="script.js"></script>
+    <!-- JavaScriptファイルの読み込み（電卓の動作処理） -->
 </body>
-</html> 
+</html>
